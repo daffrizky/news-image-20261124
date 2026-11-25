@@ -1,19 +1,18 @@
-# news-image-20261124 — make.fun entry (program form)
+[![make.fun](https://make.fun/badge/news-image-20261124.svg)](https://make.fun/bounty/news-image-20261124)
+[![rank](https://make.fun/badge/news-image-20261124/daffrizky/news-image-20261124/rank.svg)](https://make.fun/bounty/news-image-20261124)
+[![reward](https://make.fun/badge/news-image-20261124/daffrizky/news-image-20261124/reward.svg)](https://make.fun/bounty/news-image-20261124)
+
+# news-image-20261124 — make.fun entry
 
 Bounty: "Sum up 24 November's world news in one image" ($100, 50 places paid,
 ends Thu 26 Nov 2026 07:00 WIB). https://make.fun/bounty/news-image-20261124
 
-The bounty does NOT accept a direct image upload. An entry is a program in a
-public GitHub repo (main.py at root, OSI license, one commit) plus the build
-transcript bundle plus a wallet signature.
+`main.py` (Python 3.13, standard library only) copies `entry.jpg` — the
+finished 1024x1024 image (262,641 bytes) — to `/output/entry.png`.
+Deterministic: the same bytes on every run, no network.
 
-- `main.py` — deterministic, no network: writes the embedded 1024x1024 JPEG
-  (262,641 bytes) to /output/entry.png. Same bytes on every run.
-- `entry.jpg` — the finished image (v1): THE WORLD IN ONE PICTURE,
-  Tuesday 24 November 2026 — Huawei verdict, Hormuz tankers, Cartagena
-  hostages, Riyadh tower, Ukraine naval strikes, Senegal AFCON title.
-- `LICENSE` — MIT.
+Run it: `mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py`
 
-STILL MISSING before submit: public GitHub repo under Daffa's own GitHub
-account (created after 24 Nov 07:00) + full commit SHA, transcript bundle
-(`node cli/makefun.mjs bundle` / makefun-run.json), wallet signature in browser.
+The image: THE WORLD IN ONE PICTURE, Tuesday 24 November 2026 — Huawei
+verdict, Hormuz tankers, Cartagena hostages, Riyadh tower, Ukraine naval
+strikes, Senegal AFCON title.
